@@ -23,3 +23,16 @@ const getDifference = (now, then) => {
 const add = (x, y) => {
   return { result: x + y, log: `Adding ${x} ${y}` };
 };
+
+// Allow to relay on the following math properties (ruleset about composition):
+// Associative
+add(add(x, y), z) == add(x, add(y, z));
+
+// Commutative
+add(x, y) == add(y, x);
+
+// Identity
+add(x, 0) == x;
+
+// Distributive
+add(multiply(x, y), multiply(x, z)) == multiply(x, add(y, z));
